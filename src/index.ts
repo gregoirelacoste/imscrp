@@ -1,7 +1,22 @@
-import { scraping } from "./scraping";
+import {scraping} from "./services/scraping";
+import {openAiStart} from "./services/openAi";
+import {askGpt} from "./services/openAi/askGpt";
+import {PROMPT} from "./domain/ai/prompt";
+import * as fs from "fs";
 
-const run = () => {
-  console.log("hello world");
-  scraping("https://www.leboncoin.fr/decoration/2341062733.htm");
+require('dotenv').config()
+
+const dataTest = "ACCUEIL ACHETER LOUER VENDRE FAIRE GÉRER SYNDIC NOS AGENCES MIDI IMMOBILIER - ALBI AGENCE MÉTROPOLE - TOULOUSE MON COMPTE ESTIMATION ACCUEIL ACHETER LOUER VENDRE FAIRE GÉRER SYNDIC NOS AGENCES MON COMPTE ESTIMATION ALBI \" LE CASTELVIEL\" APPARTEMENT T2 169 600 € Retour Calculatrice Ajouter aux favoris Vente Appartement Albi 81000 Appartement à vendre , 2 pièces - Albi 81000 + de photos Surface : 49 m² Pièces : 2 Salle de bains : 1 Descriptif du bien Calme, belle vue, prestations intéressantes ALBI quartier castelviel, 5 minutes de la cathédrale, nous vous présentons ce surperbe appartement de type2, de 49m2 environ, en rez de chaussée avec jardin collectif, et vue sur le Tarn. Entièrement rénové il y a quelques années, ce bien se situe dans l'ancienne école de quartier. Il offre de beaux volumes et du cachet, une entrée avec placards, une pièce de vie de 20m2 environ avec une cuisine américaine équipée, avec de belles ouvertures sur le jardin, un cellier, une chambre, une salle de bain, un wc. Charges de copropriété mensuelles de 85 €. pas de procédure en cours. Découvrez la visite virtuelle de ce bien sur notre site. Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site géorisques wwwgéorisques.gouv 05 63 48 10 10 ENVOYER UN MAIL Caractéristiques techniques Chauffage Electrique Ouvertures Bois Séjour 25 m² Chambres 1 WC 1 État intérieur En bon état Cuisine Equipée Ameublement Non meublé Localisation Albi 81000 Référence 5356 Informations complémentaires Honoraires à la charge du vendeur. Dans une copropriété de 10 lots. Aucune procédure n'est en cours. Classe énergie E, Classe climat B. Montant moyen estimé des dépenses annuelles d'énergie pour un usage standard, établi à partir des prix de l'énergie de l'année 23 : entre 820 et 1140 €. Les informations sur les risques auxquels ce bien est exposé sont disponibles sur le site Géorisques : georisques.gouv.fr NOS HONORAIRES 217, avenue François Verdier 81000 Albi MIDI IMMOBILIER 05 63 48 10 10 Envoyer un mail S'y rendre Intéressé par ce bien ? Contactez-nous Merci de remplir le formulaire, nous reviendrons vers vous dans les plus brefs délais. Prénom Nom Email Téléphone Votre message J'accepte le traitement de mes données personnelles conformément au RGPD. En savoir + ENVOYER VOUS APPRÉCIEREZ ÉGALEMENT nos propriétés similaires Vous ne trouvez pas la propriété de vos rêves ? Complétez le formulaire ci-dessous pour être informé de tous les nouveaux biens confiés à notre agence et correspondant à vos recherches. Prénom Nom Email Vente Type d'offre Type de bien Localisation Budget max (€) Surface min (m²) J'accepte le traitement de mes données personnelles conformément au RGPD. En savoir + RECEVOIR DES ANNONCES Je recherche un bien Location appartement Albi (81000) Vente appartement Albi (81000) Vente maison Albi (81000) Location maison Albi (81000) Location fonds de commerce Albi (81000) Location appartement Saint-Juéry (81160) Je suis propriétaire Estimez votre bien Vendre avec nous Espace vendeur Gestion locative Notre syndic Nous contacter Informations Nos conseillers Nos honoraires Mentions légales Politique de confidentialité Plan du site Gérer les cookies Propulsé par 05 63 48 10 10 217 avenue François Verdier 81000 ALBI 05 61 21 56 87 4 allées du Président Franklin Roosevelt 31000 TOULOUSE LE RESPECT DE VOTRE VIE PRIVÉE EST UNE PRIORITÉ POUR NOUS Nous utilisons des cookies afin de vous offrir une expérience optimale et une communication pertinente sur notre site. Grace à ces technologies, nous pouvons vous proposer du contenu en rapport avec vos centres d'intérêt. Ils nous permettent également d'améliorer la qualité de nos services et la convivialité de notre site internet. Nous utiliserons uniquement les données personnelles pour lesquelles vous avez donné votre accord. Vous pouvez les modifier à n'importe quel moment via la rubrique ″Gérer les cookies″ en bas de notre site, à l'exception des cookies essentiels à son fonctionnement. Pour plus d'informations sur vos données personnelles, veuillez consulter notre politique de confidentialité . Tout accepter Tout refuser Personnaliser"
+
+const run = async () => {
+    console.log("hello world");
+    const scrappedPage = await scraping("https://www.midiimmobilier.immo/vente/appartement-t2-2-pieces-albi-81000,VA4309");
+    if (!scrappedPage) throw new Error("Pas de contenu");
+    const openAi = await openAiStart()
+    const res = await askGpt(openAi, {prompt: PROMPT(scrappedPage)})
+    fs.writeFile("save_res.json",JSON.stringify(res.data),(err) => {
+        console.log(err);
+    })
+    console.log("RES : ", res?.data?.choices?.[0]?.text)
 };
 run();

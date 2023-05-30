@@ -1,0 +1,1 @@
+{"id":"cmpl-7LxAyxV17s6kENRJnf8iGIFjh8tmG","object":"text_completion","created":1685466716,"model":"text-curie-001","choices":[{"text":"\nprice: 912.60;\naddress: \"Castelviel\" ;\ntitle: \"Appartement à vendre Albi 81000\" ;\nsurface: 7850;","index":0,"logprobs":null,"finish_reason":null}],"usage":{"prompt_tokens":1454,"completion_tokens":40,"total_tokens":1494}}

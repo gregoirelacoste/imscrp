@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.1.0",
     "nodemon": "^2.0.22",
+    "openai": "^3.2.1",
     "puppeteer": "^20.4.0",
     "tsc": "^2.0.4",
     "typescript": "^5.0.4"
