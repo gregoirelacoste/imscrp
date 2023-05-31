@@ -1,5 +1,25 @@
 [
   {
+    "id": 5,
+    "data": "\n\nType de moteur : enum\nPuissance moteur : float\nAutonomie batterie : float\nTemps de charge : float\nLargeur de coupe : float\nHauteur de coupe : float\nCapacité de la bac : float\nNiveau sonore : float\nErgonomie : bool\nFacilité d'utilisation : bool\nGarantie : float\nPrix : float",
+    "type": "tondeuse electrique sans fil"
+  },
+  {
+    "id": 4,
+    "data": "\n\nType de moteur : enum\nPuissance moteur : float\nAutonomie batterie : float\nTemps de charge : float\nLargeur de coupe : float\nHauteur de coupe : float\nCapacité de la bac : float\nNiveau sonore : float\nErgonomie : bool\nFacilité d'utilisation : bool\nGarantie : float\nPrix : float",
+    "type": "tondeuse electrique sans fil"
+  },
+  {
+    "id": 3,
+    "data": "                                                                                                                                                                                                                                                                ",
+    "type": "tondeuse electrique sans fil"
+  },
+  {
+    "id": 2,
+    "data": "                                                                                                                                                                                                                                                                ",
+    "type": "tondeuse electrique sans fil"
+  },
+  {
     "id": 1,
     "data": " \"Le Castelviel\" \n     price:169600;\n     address: Castelviel;\n     title: \"Le Castelviel\";\n     surface: 81000;\n   }"
   },

@@ -68,6 +68,10 @@ class DBJson<T> {
 export interface CriteriaType extends Entity {
     type: string
 }
+export interface ResultType extends Entity {
+    type: string,
+    url?: string,
+}
 
 export class Criteria extends DBJson<CriteriaType> {
     constructor() {
@@ -81,7 +85,7 @@ export class Criteria extends DBJson<CriteriaType> {
 
 }
 
-export class Result extends DBJson<Entity> {
+export class Result extends DBJson<ResultType> {
     constructor() {
         super(`${DB_PATH}result.json`);
     }

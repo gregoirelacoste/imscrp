@@ -1,7 +1,6 @@
 import {ScrappedPage} from "../../services/scraping";
 
 const instruction = {
-    pageInfo: `Trouve les informations pertinentes dans le texte suivant pour remplir les informations dans le format JSON suivant :`,
     createCriteria: (type: string) => `
 Liste les critères d'évaluation de manière exhaustive permettant de comparer plusieurs ${type}. Format attendu : 
 {
@@ -12,11 +11,6 @@ Préfère les type booléan ou enum au string`
 
 
 export const prompt = {
-    pageInfo: (page: ScrappedPage, dataFormat: string) => `
-        ${instruction.pageInfo}
-        ${dataFormat}
-  
-        ${page}
-        `,
+    pageInfo: (page: ScrappedPage, dataFormat: string) => `Depuis le texte suivant :\n${page}\nUtilise les informations pour compléter le JSON suivant :\n${dataFormat}`,
     createCriteria: (type: string) => `${instruction.createCriteria(type)}`
 }
