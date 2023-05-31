@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "data": " \"Le Castelviel\" \n     price:169600;\n     address: Castelviel;\n     title: \"Le Castelviel\";\n     surface: 81000;\n   }"
+  },
+  {
+    "id": 2,
+    "data": "\n\"The Castelviel\" real estate agency is looking for clients. The following informations are available: price: €169,600; address: \"Le Castelviel\" avenue François Verdier; title: \"Property for sale\"; surface: 49 square meters."
+  },
+  {
+    "id": 3,
+    "data": "\nprice:9.5;\n\naddress: \";\n\ntitle: \"Vasta domus\";\n\nsurface: 50;"
+  },
+  {
+    "id": 4,
+    "data": "\n{\n    \"price\":1012,\n    \"address\": \"castelviel 5\",\n    \"title\": \"APPARTEMENT 2 PIECES ARRIVÉ EN RÉNOVATION\",\n    \"surface\": 49,\n    \"géorique\": {\"id\":1,\"name\":\"Location\",\"description\":\"Propriétés disponibles à Albi et Toulouse\",\"url\":\"georisques.gouv.fr\",\"target\":\"_blank\"}\n    }"
+  },
+  {
+    "id": 5,
+    "data": "\n{\n\n\"price\": 149000,\n \"address\": \"ALBI\",\n \"title\": \"Le Castelviel\",\n \"surface\": 3,\n }"
+  },
+  {
+    "id": 6,
+    "data": "\nprice:1000;\naddress:“Castelviel - Rue François Verdier - Albi”;\ntitle:“Appartement T2 169 600 €”;\nsurface:79; }"
+  },
+  {
+    "id": 7,
+    "data": "\nAlbum photo personnel\nPrice:Number;\nAddress:string;\nTitle:string;\nSurface:number;"
+  },
+  {
+    "id": 8,
+    "data": "\nPrice : 49000.00\nAddress: \"Le Castelviel\"\nTitle: \" Appartement T2 169 600 € \"\nSurface: 49 m²\nPris : 2\nCategory: \"Appartement-à-vendre\"\n"
+  }
+]

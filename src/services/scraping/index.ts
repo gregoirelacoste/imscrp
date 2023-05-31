@@ -15,10 +15,10 @@ export const scraping = async (url: string): Promise<ScrappedPage> => {
 
     const textContent = await getPageContent(page);
     const optimizedPageContent = textContent && improveSrappedContent(textContent);
-    fs.writeFile("saved.html", optimizedPageContent, (err) => {
-        console.log(err);
-    });
+
     await closeBrowser(browser);
+    if (!optimizedPageContent) throw new Error("Pas de contenu");
+
     return optimizedPageContent
 
 };
