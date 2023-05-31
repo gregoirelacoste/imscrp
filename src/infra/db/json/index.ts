@@ -3,14 +3,14 @@ import * as fs from "fs";
 const DB_PATH = `src/infra/db/json/data/`
 export type Entity = { id: number; data: string }
 
-const createEntity = (entity: Pick<Entity, "data">, entityArray: Entity[]): Entity => {
+const createEntity = <T>(entity: Omit<T, "id">, entityArray: T[]): T => {
     return {
         id: entityArray[0]?.id + 1 || 1,
         ...entity
     }
 }
 
-class DBJson {
+class DBJson<T> {
     private readonly collection: string;
 
     constructor(collection: string) {
@@ -26,7 +26,7 @@ class DBJson {
         }
     }
 
-    load(): { data: any, id: number }[] {
+    load(): T[] {
         return JSON.parse(fs.readFileSync(this.collection, 'utf8'));
     }
 
@@ -34,7 +34,7 @@ class DBJson {
         fs.writeFileSync(this.collection, JSON.stringify(data, null, 2));
     }
 
-    async insert(newData: Pick<Entity, "data">) {
+    async insert(newData: Omit<T, 'id'>) {
         const data = this.load();
         data.unshift(createEntity(newData, data));
         await this.save(data);
@@ -42,7 +42,7 @@ class DBJson {
         return data;
     }
 
-    async get(id: number) {
+    async get(id: number): Promise<T> {
         const data = this.load();
         return data.find(d => d.id === id)
     }
@@ -65,23 +65,23 @@ class DBJson {
     }
 }
 
-export class Prompt extends DBJson {
-    constructor() {
-        super(`${DB_PATH}prompt.json`);
-    }
-
-    id: number;
-    instruction: string;
-    dataFormat: string;
+export interface CriteriaType extends Entity {
+    type: string
 }
 
-export class Criteria extends DBJson {
+export class Criteria extends DBJson<CriteriaType> {
     constructor() {
         super(`${DB_PATH}criteria.json`);
     }
+
+    getByType(type: string): CriteriaType | null {
+        const datas = this.load()
+        return datas.find(d => d.type === type) || null
+    }
+
 }
 
-export class Result extends DBJson {
+export class Result extends DBJson<Entity> {
     constructor() {
         super(`${DB_PATH}result.json`);
     }

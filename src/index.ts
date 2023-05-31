@@ -9,7 +9,7 @@ const promptDb = new Prompt()
 const result = new Result()
 const openAi = openAiStart().then(res => {
     // getPageInfoFromPrompt(openAi)("https://www.midiimmobilier.immo/vente/appartement-t2-2-pieces-albi-81000,VA4309", result);
-    createCrietriaFromPrompt(res, criteriaDb)("tondeuse")
+    createCrietriaFromPrompt(res, criteriaDb)("tondeuse electrique sans fil")
 })
 
 

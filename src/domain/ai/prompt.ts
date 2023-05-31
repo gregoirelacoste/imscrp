@@ -5,7 +5,7 @@ const instruction = {
     createCriteria: (type: string) => `
 Liste les critères d'évaluation de manière exhaustive permettant de comparer plusieurs ${type}. Format attendu : 
 {
-criteria_snakecase: data_type
+"criteria_snakecase":"data_type"
 }
 Préfère les type booléan ou enum au string`
 }

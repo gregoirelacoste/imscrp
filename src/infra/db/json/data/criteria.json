@@ -1,10 +1,39 @@
 [
   {
-    "id": 1,
-    "data": "\n\n{\nprice: number,\npower: number,\nnoise_level: number,\nweight: number,\ncutting_width: number,\ngrass_collector_capacity: number,\nbattery_life: number,\nbattery_type: enum,\nmulching_function: boolean,\nself_propelled: boolean,\nvariable_speed: boolean,\nanti_vibration_system: boolean,\nwater_resistant: boolean,\nguarantee: number\n}"
+    "id": 9,
+    "data": "\n\n{\n\"type_de_moteur\": \"enum\",\n\"puissance_moteur\": \"int\",\n\"autonomie_batterie\": \"int\",\n\"temps_de_charge\": \"int\",\n\"largeur_de_coupe\": \"int\",\n\"hauteur_de_coupe\": \"int\",\n\"capacité_de_la_bac\": \"int\",\n\"niveau_sonore\": \"int\",\n\"ergonomie\": \"bool\",\n\"facilité_d'utilisation\": \"bool\",\n\"garantie\": \"int\",\n\"prix\": \"int\"\n}",
+    "type": "tondeuse electrique sans fil"
   },
   {
-    "id": null,
-    "data": "\n\n{\nprice: number,\npower: number,\nnoise_level: number,\nweight: number,\ncutting_width: number,\ngrass_collector_capacity: number,\nbattery_life: number,\nbattery_type: enum,\nmulching_function: boolean,\nself_propelled: boolean,\nvariable_speed: boolean,\nanti_vibration_system: boolean,\nwater_resistant: boolean,\nguarantee: number\n}"
+    "id": 8,
+    "data": "\n\n{\n\"type_de_moteur\": \"enum\",\n\"puissance_moteur\": \"float\",\n\"autonomie_batterie\": \"float\",\n\"temps_de_charge\": \"float\",\n\"largeur_de_coupe\": \"float\",\n\"hauteur_de_coupe\": \"float\",\n\"capacité_de_la_bac_de_ramassage\": \"float\",\n\"niveau_sonore\": \"float\",\n\"ergonomie\": \"bool\",\n\"facilité_d'utilisation\": \"bool\",\n\"garantie\": \"float\",\n\"prix\": \"float\"\n}"
+  },
+  {
+    "id": 7,
+    "data": "\n\n{\n\"type_de_moteur\": \"enum\",\n\"puissance_moteur\": \"int\",\n\"autonomie_batterie\": \"int\",\n\"temps_de_charge\": \"int\",\n\"largeur_de_coupe\": \"int\",\n\"hauteur_de_coupe\": \"int\",\n\"capacité_de_la_bac\": \"int\",\n\"niveau_sonore\": \"int\",\n\"ergonomie\": \"bool\",\n\"facilité_d'utilisation\": \"bool\",\n\"garantie\": \"int\",\n\"prix\": \"int\"\n}"
+  },
+  {
+    "id": 6,
+    "data": "\n\n{\n\"type_de_moteur\": \"enum\",\n\"puissance_moteur\": \"int\",\n\"autonomie_batterie\": \"int\",\n\"temps_de_charge\": \"int\",\n\"largeur_de_coupe\": \"int\",\n\"hauteur_de_coupe\": \"int\",\n\"capacité_de_la_bac\": \"int\",\n\"niveau_sonore\": \"int\",\n\"ergonomie\": \"bool\",\n\"facilité_d'utilisation\": \"bool\",\n\"garantie\": \"int\",\n\"prix\": \"int\"\n}"
+  },
+  {
+    "id": 5,
+    "data": "\n\n{\n\"type_de_moteur\": \"enum\",\n\"puissance_moteur\": \"int\",\n\"autonomie_batterie\": \"int\",\n\"temps_de_charge\": \"int\",\n\"largeur_de_coupe\": \"int\",\n\"hauteur_de_coupe\": \"int\",\n\"capacité_de_la_bac_de_ramassage\": \"int\",\n\"niveau_sonore\": \"int\",\n\"ergonomie\": \"bool\",\n\"facilité_d'utilisation\": \"bool\",\n\"garantie\": \"int\",\n\"prix\": \"int\"\n}"
+  },
+  {
+    "id": 4,
+    "data": "\n\n{\n\"type_de_moteur\": \"enum\",\n\"puissance_moteur\": \"int\",\n\"autonomie_batterie\": \"int\",\n\"temps_de_charge\": \"int\",\n\"largeur_de_coupe\": \"int\",\n\"hauteur_de_coupe\": \"int\",\n\"capacité_de_la_bac\": \"int\",\n\"niveau_sonore\": \"int\",\n\"ergonomie\": \"bool\",\n\"facilité_d'utilisation\": \"bool\",\n\"garantie\": \"int\",\n\"prix\": \"int\"\n}"
+  },
+  {
+    "id": 3,
+    "data": "\n\n{\n\"type_de_moteur\": \"enum\",\n\"puissance_moteur\": \"float\",\n\"autonomie_batterie\": \"float\",\n\"temps_de_charge\": \"float\",\n\"largeur_de_coupe\": \"float\",\n\"hauteur_de_coupe\": \"float\",\n\"capacité_de_la_bac\": \"float\",\n\"niveau_sonore\": \"float\",\n\"ergonomie\": \"bool\",\n\"facilité_d'utilisation\": \"bool\",\n\"garantie\": \"float\",\n\"prix\": \"float\"\n}"
+  },
+  {
+    "id": 2,
+    "data": "\n\n{\n\"type_de_moteur\": \"enum\",\n\"puissance_moteur\": \"float\",\n\"autonomie_batterie\": \"float\",\n\"temps_de_charge\": \"float\",\n\"largeur_de_coupe\": \"float\",\n\"hauteur_de_coupe\": \"float\",\n\"capacité_de_la_bac_de_ramassage\": \"float\",\n\"système_anti_blocage\": \"boolean\",\n\"système_anti_collision\": \"boolean\",\n\"système_anti_mousse\": \"boolean\",\n\"système_anti_pluie\": \"boolean\",\n\"connectivité_bluetooth\": \"boolean\",\n\"connectivité_wifi\": \"boolean\",\n\"application_mobile\": \"boolean\",\n\"poids\": \"float\",\n\"garantie\": \"float\"\n}"
+  },
+  {
+    "id": 1,
+    "data": "\n\n{\n\"type_de_moteur\": \"enum\",\n\"puissance_moteur\": \"float\",\n\"autonomie_batterie\": \"float\",\n\"temps_de_charge\": \"float\",\n\"largeur_de_coupe\": \"float\",\n\"hauteur_de_coupe\": \"float\",\n\"capacité_de_la_bac_de_ramassage\": \"float\",\n\"niveau_sonore\": \"float\",\n\"ergonomie\": \"bool\",\n\"facilité_d'utilisation\": \"bool\",\n\"garantie\": \"float\",\n\"prix\": \"float\"\n}"
   }
 ]
