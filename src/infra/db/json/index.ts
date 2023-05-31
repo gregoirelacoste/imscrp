@@ -5,7 +5,7 @@ export type Entity = { id: number; data: string }
 
 const createEntity = (entity: Pick<Entity, "data">, entityArray: Entity[]): Entity => {
     return {
-        id: entityArray?.length + 1,
+        id: entityArray[0]?.id + 1,
         ...entity
     }
 }
@@ -36,7 +36,7 @@ class DBJson {
 
     async insert(newData: Pick<Entity, "data">) {
         const data = this.load();
-        data.push(createEntity(newData, data));
+        data.unshift(createEntity(newData, data));
         await this.save(data);
         console.log("inserted")
         return data;
@@ -69,11 +69,15 @@ export class Prompt extends DBJson {
     constructor() {
         super(`${DB_PATH}prompt.json`);
     }
+
+    id: number;
+    instruction: string;
+    dataFormat: string;
 }
 
-export class SearchCriteria extends DBJson {
+export class Criteria extends DBJson {
     constructor() {
-        super(`${DB_PATH}search_criteria.json`);
+        super(`${DB_PATH}criteria.json`);
     }
 }
 

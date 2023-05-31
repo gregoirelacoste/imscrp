@@ -1,0 +1,1 @@
+export const formatOpenAiRes = (res) => res?.data?.choices?.[0]?.text

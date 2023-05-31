@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "test",
-    "start": "ts-node-dev --respawn --transpile-only ./src/index.ts"
+    "test": "ts-node-dev --respawn --transpile-only src/test.ts",
+    "start": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
   "author": "",
   "license": "ISC",

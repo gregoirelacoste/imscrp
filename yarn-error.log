@@ -31,10 +31,10 @@ npm manifest:
     "name": "imscrp",
     "version": "1.0.0",
     "description": "",
-    "main": "index.ts",
+    "main": "getPageInfoFromPrompt.ts",
     "scripts": {
       "test": "test",
-      "start": "ts-node-dev --respawn --transpile-only ./src/index.ts"
+      "start": "ts-node-dev --respawn --transpile-only ./src/getPageInfoFromPrompt.ts"
     },
     "author": "",
     "license": "ISC",

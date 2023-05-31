@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "data": "\n\n{\nprice: number,\npower: number,\nnoise_level: number,\nweight: number,\ncutting_width: number,\ngrass_collector_capacity: number,\nbattery_life: number,\nbattery_type: enum,\nmulching_function: boolean,\nself_propelled: boolean,\nvariable_speed: boolean,\nanti_vibration_system: boolean,\nwater_resistant: boolean,\nguarantee: number\n}"
+  },
+  {
+    "id": null,
+    "data": "\n\n{\nprice: number,\npower: number,\nnoise_level: number,\nweight: number,\ncutting_width: number,\ngrass_collector_capacity: number,\nbattery_life: number,\nbattery_type: enum,\nmulching_function: boolean,\nself_propelled: boolean,\nvariable_speed: boolean,\nanti_vibration_system: boolean,\nwater_resistant: boolean,\nguarantee: number\n}"
+  }
+]
