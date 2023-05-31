@@ -5,7 +5,7 @@ export type Entity = { id: number; data: string }
 
 const createEntity = (entity: Pick<Entity, "data">, entityArray: Entity[]): Entity => {
     return {
-        id: entityArray[0]?.id + 1,
+        id: entityArray[0]?.id + 1 || 1,
         ...entity
     }
 }
